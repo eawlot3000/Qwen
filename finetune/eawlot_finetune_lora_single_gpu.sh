@@ -2,6 +2,8 @@
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 
 MODEL="Qwen/Qwen-7B-Chat-Int4" # Set the path if you do not want to load from huggingface directly
+#MODEL="/home/eawlot3000/cherish/Qwen/finetune/output_qwen/checkpoint-1000"
+
 # ATTENTION: specify the path to your training data, which should be a json file consisting of a list of conversations.
 # See the section for finetuning in README for more information.
 #DATA="path_to_data" # og
@@ -62,6 +64,10 @@ python3 ../finetune.py \
   --lazy_preprocess True \
   --gradient_checkpointing \
   --use_lora
+
+
+# !!!!
+# i have turn that shit off!
 
 # If you use fp16 instead of bf16, you should use deepspeed
 # --fp16 True --deepspeed finetune/ds_config_zero2.json

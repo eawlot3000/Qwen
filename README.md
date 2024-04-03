@@ -1,4 +1,9 @@
-# log
+# this repo is for using its 'finetune' for my own [project](https://github.com/eawlot3000/fine_tune_chatbot_with_ellie)
+* i only use the `finetune` dir
+
+
+
+## logs
 * i use this to finetune. and i fixed your fucking [GPU backend shit](https://github.com/AutoGPTQ/AutoGPTQ/issues/406) `finetune.py`
 
 
@@ -11,6 +16,13 @@
 
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 --------
 --------
 --------
