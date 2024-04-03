@@ -306,9 +306,16 @@ def train():
     # Load model and tokenizer
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
+
+        # FUCK ME
+
+        # solve this bitch: https://github.com/AutoGPTQ/AutoGPTQ/issues/406
+        device_map="cuda:0",
+
+
         config=config,
         cache_dir=training_args.cache_dir,
-        device_map=device_map,
+        #device_map=device_map,
         trust_remote_code=True,
         quantization_config=GPTQConfig(
             bits=4, disable_exllama=True
